@@ -48,9 +48,9 @@ export const TEXTILE = {
 }
 
 export const WALLETS = {
-  // manager, 22 Nov 2026. On-chain check that day: plain wallet, 4 transactions, no USDC or cNGN, ~0 ETH.
+  // manager, 22 Nov 2026; confirmed as Kiyoshi's Base wallet. On-chain that day: 4 transactions, no USDC/cNGN, ~0 ETH.
   treasury: '0xcbf9f04c80451d043062daf27e36e55bbbe8512c',
-  // manager, 22 Nov 2026. Plain wallet (not a Safe contract): must be a hardware wallet. Not the bot wallet.
+  // manager, 22 Nov 2026; confirmed a hardware wallet (not a Safe contract). Not the bot wallet.
   owner: '0xf95E42d5FC3602b05CE9cF8d2E4cFa6b810F3113',
   manager: '0xf95E42d5FC3602b05CE9cF8d2E4cFa6b810F3113',       // manager, 22 Nov 2026 (same as owner)
   feeRecipient: '0xf95E42d5FC3602b05CE9cF8d2E4cFa6b810F3113',  // manager, 22 Nov 2026 (same as owner)
