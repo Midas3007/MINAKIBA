@@ -73,3 +73,18 @@ export const FUND = {
   settleUtc: '20:07',           // 21:07 Lagos time
   potCarveBps: 1000,            // 10% of each day's trading profit
 }
+
+// Hosting (created 22 Nov 2026)
+export const HOSTING = {
+  neon: { project: 'minakiba', projectId: 'holy-wave-85613837', region: 'aws-us-east-1', database: 'minakiba',
+          branches: { main: 'br-restless-credit-bcihfkfd', dev: 'br-broad-forest-bc168rku' } },
+  vercel: { team: 'midart', project: 'minakiba', projectId: 'prj_cSQzT8c2ABLTIBGO9HpE8g1MGWWm', region: 'iad1' },
+}
+
+// Base Sepolia test wallets (throwaway, test ETH only; keys are in Vercel as TESTNET_KEEPER_PRIVATE_KEY and
+// TESTNET_SIM_KEYS). On testnet the owner, manager and fee recipient are the manager's own wallet.
+export const TESTNET_WALLETS = {
+  keeper: '0xC0232463A666Fa2fF42E9c43f8f598520EED92f9',     // also deploys the test vault
+  treasury: '0x08C8FD45eEAA3438C1c3dE62a2e9200a52727ee6',
+  members: ['0x06072Ce01761A834dc1d84b6F8d5699f19AA510F', '0x8d679864ad2385e2Cb0E19e89A3b495E19063DC7'],
+}
