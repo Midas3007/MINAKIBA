@@ -1,0 +1,9 @@
+node_modules
+.env
+trades.jsonl
+state.json
+flows.json
+base-cngn-watch.jsonl
+base-trades.jsonl
+base-state.json
+tag-volume-cache.json
