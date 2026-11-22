@@ -1,0 +1,21 @@
+[profile.default]
+src = "src"
+test = "test"
+script = "script"
+libs = ["lib"]
+out = "out"
+solc_version = "0.8.28"
+evm_version = "cancun"
+optimizer = true
+optimizer_runs = 200
+bytecode_hash = "none"
+cbor_metadata = false
+remappings = ["forge-std/=lib/forge-std/src/"]
+
+[rpc_endpoints]
+base = "${BASE_RPC_URL}"
+base_sepolia = "${BASE_SEPOLIA_RPC_URL}"
+
+[etherscan]
+base = { key = "${ETHERSCAN_API_KEY}", chain = 8453 }
+base_sepolia = { key = "${ETHERSCAN_API_KEY}", chain = 84532 }
