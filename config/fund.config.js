@@ -48,10 +48,12 @@ export const TEXTILE = {
 }
 
 export const WALLETS = {
-  treasury: null,     // Kiyoshi's Base wallet (derived from its key; not in the repo)
-  owner: null,        // Safe multisig or hardware wallet. Must NOT be the bot wallet.
-  manager: null,      // manager's personal wallet
-  feeRecipient: null,
+  // manager, 22 Nov 2026. On-chain check that day: plain wallet, 4 transactions, no USDC or cNGN, ~0 ETH.
+  treasury: '0xcbf9f04c80451d043062daf27e36e55bbbe8512c',
+  // manager, 22 Nov 2026. Plain wallet (not a Safe contract): must be a hardware wallet. Not the bot wallet.
+  owner: '0xf95E42d5FC3602b05CE9cF8d2E4cFa6b810F3113',
+  manager: '0xf95E42d5FC3602b05CE9cF8d2E4cFa6b810F3113',       // manager, 22 Nov 2026 (same as owner)
+  feeRecipient: '0xf95E42d5FC3602b05CE9cF8d2E4cFa6b810F3113',  // manager, 22 Nov 2026 (same as owner)
   keeper: null,       // new wallet, holds gas only; key lives in Vercel env
 }
 
@@ -61,13 +63,13 @@ export const VAULT = {
 }
 
 export const FUND = {
-  feeBps: null,                 // Celo fund runs 1500 (15%); hard cap 2000
+  feeBps: 1500,                 // manager, 22 Nov 2026: 15% at launch; hard cap 2000
   feeCapBps: 2000,
   maxNavChangeBps: 2500,        // brief 5.2
   changeDelaySec: 48 * 3600,    // brief 5.1
   queueLimit: 100,
-  depositCapUsd: null,
-  minDepositUsd: null,
+  depositCapUsd: 50,            // manager, 22 Nov 2026
+  minDepositUsd: 1,             // manager, 22 Nov 2026
   settleUtc: '20:07',           // 21:07 Lagos time
   potCarveBps: 1000,            // 10% of each day's trading profit
 }
